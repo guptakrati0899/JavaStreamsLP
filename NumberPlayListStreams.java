@@ -41,6 +41,13 @@ public class NumberPlayListStreams {
 		Integer min = myNumberList.stream().filter(isEvenFunction).min(Comparator.comparing(Integer::intValue)).orElse(null);
 		System.out.println("Min Even : " +min);
 		
+		//Sum , count and average
+		
+		Integer sum = myNumberList.stream().reduce(0, Integer::sum);
+		long count = myNumberList.stream().count();
+		System.out.println("Average of " + sum +"/"+ count+ "= " + sum/count);
+		
+		
 		
 	}
 
