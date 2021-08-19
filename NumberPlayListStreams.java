@@ -23,7 +23,7 @@ public class NumberPlayListStreams {
 		//Process Stream, Apply Operation and Store Result
 		
 		Function<Integer,Double> toDoubleFunction = Integer::doubleValue;
-		List<Double> doubleList = myNumberList.stream().map(toDoubleFunction).collect(Collectors.toList());
+		List<Double> doubleList = (List<Double>) myNumberList.stream().map(toDoubleFunction);
 		System.out.println("Printing Double List : " + doubleList);
 	}
 
