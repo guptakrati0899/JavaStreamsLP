@@ -26,8 +26,12 @@ public class NumberPlayListStreams {
 		Function<Integer,Double> toDoubleFunction = Integer::doubleValue;
 		Predicate<Integer> isEvenFunction = n -> n>0 && n%2 ==0;
 		
-		List<Double> doubleList = myNumberList.stream().filter(isEvenFunction).map(toDoubleFunction).collect(Collectors.toList());
+		List<Double> doubleList = myNumberList.stream().filter(isEvenFunction).peek(n -> System.out.println("Peak Even Number : " +n)).map(toDoubleFunction).collect(Collectors.toList());
 		System.out.println("Printing Double List : " + doubleList);
+		
+		
+		Integer first = myNumberList.stream().filter(isEvenFunction).peek(n -> System.out.println("Peak Even Number : " +n)).findFirst().orElse(null);
+		System.out.println("First Even : " + first);
 	}
 
 }
