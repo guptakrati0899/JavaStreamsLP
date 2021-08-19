@@ -7,7 +7,13 @@ public class NumberPlayListStreams {
 	
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to Master Branch Of Java Streams");
+		List<Integer> myNumberList = new ArrayList<Integer>();
+		for(int i = 0; i < 5 ; i++) myNumberList.add(i);
+		
+		// Processing Stream 
+		myNumberList.stream().forEach(n ->{
+			System.out.println(" Stream For Each Value ::" +n);
+		});
 	}
 
 }
