@@ -2,6 +2,7 @@ package streamsjava;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
@@ -56,7 +57,9 @@ public class NumberPlayListStreams {
 		System.out.println("All Even : "+ allEven + "|| One Even: "+ oneEven+ "|| None Multiple Of Six: " +noMultipleSix);
 		
 		
-		
+		//Sorting Of List
+		List<Integer> sortedList = myNumberList.stream().sorted().collect(Collectors.toList());
+		System.out.println("Sorted List : "+sortedList);
 		
 	}
 
