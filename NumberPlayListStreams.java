@@ -48,6 +48,15 @@ public class NumberPlayListStreams {
 		System.out.println("Average of " + sum +"/"+ count+ "= " + sum/count);
 		
 		
+		//At least one match or all match
+		
+		boolean allEven = myNumberList.stream().allMatch(isEvenFunction);
+		boolean oneEven = myNumberList.stream().anyMatch(isEvenFunction);
+		boolean noMultipleSix = myNumberList.stream().noneMatch(i -> i>0 && i%6 ==0);
+		System.out.println("All Even : "+ allEven + "|| One Even: "+ oneEven+ "|| None Multiple Of Six: " +noMultipleSix);
+		
+		
+		
 		
 	}
 
